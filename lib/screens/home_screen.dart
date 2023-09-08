@@ -23,14 +23,18 @@ class HomeScreen extends StatelessWidget {
             buildRwoWidget("FullName", "Olamilekan Adeleke"),
             buildRwoWidget("About", "I am a flutter mobile developer"),
             const Spacer(),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const WebviewScreen(),
-                ));
-              },
-              style: const ButtonStyle(),
-              child: const Text("Open Github"),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const WebviewScreen(),
+                  ));
+                },
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(300, 50),
+                ),
+                child: const Text("Open Github"),
+              ),
             ),
             const SizedBox(height: 40),
           ],

@@ -12,7 +12,6 @@ class WebviewScreen extends StatefulWidget {
 class _WebviewScreenState extends State<WebviewScreen> {
   var loadingPercentage = 0;
   late final WebViewController _controller;
-  // final ValueNotifier<bool> isLoading = ValueNotifier<bool>(false);
 
   @override
   void initState() {
@@ -52,24 +51,7 @@ class _WebviewScreenState extends State<WebviewScreen> {
         children: [
           WebViewWidget(controller: _controller),
           if (loadingPercentage < 100)
-            LinearProgressIndicator(
-              value: loadingPercentage / 100.0,
-            ),
-          // ValueListenableBuilder<bool>(
-          //   valueListenable: isLoading,
-          //   builder: (_, bool loading, __) {
-          //     return Center(
-          //       child: Visibility(
-          //         visible: loading,
-          //         child: const SizedBox(
-          //           width: 20,
-          //           height: 20,
-          //           child: CircularProgressIndicator(),
-          //         ),
-          //       ),
-          //     );
-          //   },
-          // ),
+            LinearProgressIndicator(value: loadingPercentage / 100.0),
         ],
       ),
     );
