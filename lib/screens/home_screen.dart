@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             buildRwoWidget("FullName", "Olamilekan Adeleke"),
             buildRwoWidget("About", "I am a flutter mobile developer"),
             const Spacer(),
-            Center(
+            Center( 
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
